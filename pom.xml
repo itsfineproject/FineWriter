@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>DreamTeam</groupId>
-    <artifactId>InputDataDispatcher</artifactId>
+    <artifactId>FineWriter</artifactId>
     <version>1.0</version>
 
     <!-- Spring-boot-starter-parent -->

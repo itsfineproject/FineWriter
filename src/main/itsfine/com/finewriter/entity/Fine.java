@@ -24,11 +24,6 @@ public class Fine {
     private String car_number;
     @Column(name = "parking_id")
     private int parking_id;
-//    @JsonFormat(pattern = "yyyy-MM-dd")
-
-//    @JsonSerialize(using = LocalDateTimeSerializer.class)
-//    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "date_time")
     private LocalDateTime date_time;
 

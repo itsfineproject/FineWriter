@@ -14,19 +14,15 @@ import java.io.IOException;
 @EnableBinding(Sink.class)
 public class ReceiverService {
     ObjectMapper mapper = new ObjectMapper().findAndRegisterModules();
-    IFineService iFineService;
+
 
     @Autowired
     FineRepository fineRepository;
 
     @StreamListener(Sink.INPUT)
-    public void takeSensorData(String strSensor) throws IOException, InterruptedException {
+    public void takeSensorData(String strSensor) throws IOException {
         FineDto fineDto = mapper.readValue(strSensor, FineDto.class);
-//        Fine fine=new Fine(fineDto);
-        System.out.println(fineDto);
-//        iFineService.writeToDB(fineDto);
         fineRepository.save(new Fine(fineDto));
-        System.out.println("done");
 
     }
 }
