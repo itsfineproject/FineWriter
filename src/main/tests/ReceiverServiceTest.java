@@ -1,16 +1,14 @@
-package main.itsfine.com.finewriter.service;
+package main.tests;
 
 import main.itsfine.com.finewriter.dto.FineDto;
 import main.itsfine.com.finewriter.repository.FineRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import main.itsfine.com.finewriter.service.ReceiverService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import java.io.IOException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
