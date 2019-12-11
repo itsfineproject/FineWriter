@@ -22,7 +22,10 @@ public class ReceiverService {
     @StreamListener(Sink.INPUT)
     public void takeSensorData(String strSensor) throws IOException {
         FineDto fineDto = mapper.readValue(strSensor, FineDto.class);
-        fineRepository.save(new Fine(fineDto));
-
+        writerToDB(fineDto);
+    }
+    public boolean writerToDB(FineDto fineDto){
+            fineRepository.save(new Fine(fineDto));
+            return true;
     }
 }
