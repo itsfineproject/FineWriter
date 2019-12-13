@@ -19,6 +19,7 @@ public class FineDto {
 
     private int parking_id;
     private String car_number;
+    @JsonFormat(locale = "yyyy-MM-dd")
     private LocalDateTime date_time;
 
 

@@ -1,5 +1,6 @@
 package main.itsfine.com.finewriter.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import main.itsfine.com.finewriter.dto.FineDto;
 import main.itsfine.com.finewriter.entity.Fine;
@@ -20,11 +21,12 @@ public class ReceiverService {
     FineRepository fineRepository;
 
     @StreamListener(Sink.INPUT)
-    public void takeSensorData(String strSensor) throws IOException {
-        FineDto fineDto = mapper.readValue(strSensor, FineDto.class);
-        writerToDB(fineDto);
+    public void takeParkingObj(String strParkingObj) throws IOException {
+
+        writerToDB(strParkingObj);
     }
-    public boolean writerToDB(FineDto fineDto){
+    public boolean writerToDB(String strParkingObj) throws JsonProcessingException {
+        FineDto fineDto = mapper.readValue(strParkingObj, FineDto.class);
             fineRepository.save(new Fine(fineDto));
             return true;
     }
