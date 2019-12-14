@@ -1,6 +1,6 @@
-package main.itsfine.com.finewriter.repository;
+package itsfine.com.finewriter.repository;
 
-import main.itsfine.com.finewriter.entity.Fine;
+import itsfine.com.finewriter.entity.Fine;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

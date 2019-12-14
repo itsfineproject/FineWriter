@@ -1,4 +1,4 @@
-package main.itsfine.com.finewriter;
+package itsfine.com.finewriter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,9 @@
-package main.itsfine.com.finewriter.entity;
+package itsfine.com.finewriter.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import main.itsfine.com.finewriter.dto.FineDto;
+import itsfine.com.finewriter.dto.FineDto;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

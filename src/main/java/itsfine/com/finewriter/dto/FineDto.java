@@ -1,4 +1,4 @@
-package main.itsfine.com.finewriter.dto;
+package itsfine.com.finewriter.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
@@ -16,11 +15,8 @@ import java.time.LocalDateTime;
 
 
 public class FineDto {
-
     private int parking_id;
     private String car_number;
-    @JsonFormat(locale = "yyyy-MM-dd")
+    //@JsonFormat(locale = "yyyy-MM-dd")
     private LocalDateTime date_time;
-
-
 }
